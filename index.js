@@ -19,6 +19,7 @@ window.addEventListener('resize', function(){
   camera.updateProjectionMatrix()
 })
 
+controls = new THREE.OrbitControls(camera, renderer.domElement)
 var geometry = new THREE.BoxGeometry(1, 1, 1)//contains all the points and fills of the cube
 var material = new THREE.MeshBasicMaterial({color: 0x00ff00})
 var cube = new THREE.Mesh(geometry, material)//takes geometry and applies material to it
