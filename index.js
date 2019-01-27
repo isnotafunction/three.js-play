@@ -5,6 +5,8 @@ var scene = new THREE.Scene()
 //and near and far clipping plane
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
 var renderer = new THREE.WebGLRenderer()
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.setSize(window.innerWidth, window.innerHeight)
 
 document.body.appendChild(renderer.domElement)
@@ -38,6 +40,21 @@ var cube = new THREE.Mesh(geometry, material)//takes geometry and applies materi
 scene.add(cube)//added to coordinates (0,0,0); causes both the camera and the cube
 //to be inside each other so we move the camera a bit:
 camera.position.z = 5
+
+//light
+var ambientLight = new THREE.AmbientLight(0xFFFFFF, 0.6)
+scene.add(ambientLight)
+
+var spotLight = new THREE.SpotLight(0xFFFFFF, 0.6)
+spotLight.position.set( 100, 1000, 100 ) 
+spotLight.castShadow = true
+spotLight.shadow.mapSize.width = 1024
+spotLight.shadow.mapSize.height = 1024
+
+scene.add(spotLight)
+
+var pointLight = new THREE.PointLight(0xFF0040, 1, 50)
+scene.add(pointLight)
 
 
 //floor
