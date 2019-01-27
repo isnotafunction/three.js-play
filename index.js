@@ -23,12 +23,12 @@ controls = new THREE.OrbitControls(camera, renderer.domElement)
 
 var geometry = new THREE.BoxGeometry(1, 1, 1)//contains all the points and fills of the cube
 var cubeMaterials = [
-  new THREE.MeshBasicMaterial({ color:0xC399BA, side: THREE.DoubleSide}),
-  new THREE.MeshBasicMaterial({ color:0x9D99C3, side: THREE.DoubleSide}),
-  new THREE.MeshBasicMaterial({ color:0x99B5C3, side: THREE.DoubleSide}),
-  new THREE.MeshBasicMaterial({ color:0x99C3B6, side: THREE.DoubleSide}),
-  new THREE.MeshBasicMaterial({ color:0xC7D0B2, side: THREE.DoubleSide}),
-  new THREE.MeshBasicMaterial({ color:0xD5D27C, side: THREE.DoubleSide}),
+  new THREE.MeshLambertMaterial({ color:0xC399BA, side: THREE.DoubleSide}),
+  new THREE.MeshLambertMaterial({ color:0x9D99C3, side: THREE.DoubleSide}),
+  new THREE.MeshLambertMaterial({ color:0x99B5C3, side: THREE.DoubleSide}),
+  new THREE.MeshLambertMaterial({ color:0x99C3B6, side: THREE.DoubleSide}),
+  new THREE.MeshLambertMaterial({ color:0xC7D0B2, side: THREE.DoubleSide}),
+  new THREE.MeshLambertMaterial({ color:0xD5D27C, side: THREE.DoubleSide}),
 ]
 
 // var material = new THREE.MeshBasicMaterial({color: 0x00ff00})
