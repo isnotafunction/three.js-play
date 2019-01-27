@@ -40,9 +40,10 @@ scene.add(cube)//added to coordinates (0,0,0); causes both the camera and the cu
 camera.position.z = 5
 
 //logic
+
 var update = function(){
-  cube.rotation.x += 0.01
-  cube.rotation.y += 0.01
+  cube.rotation.x += 0.007
+  cube.rotation.y += 0.007
 }
 
 var render = function(){
