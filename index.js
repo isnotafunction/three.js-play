@@ -39,6 +39,14 @@ scene.add(cube)//added to coordinates (0,0,0); causes both the camera and the cu
 //to be inside each other so we move the camera a bit:
 camera.position.z = 5
 
+
+//floor
+var floorGeometry = new THREE.CubeGeometry(10, 1, 10)
+var floorMaterial = new THREE.MeshLambertMaterial({color: 0x99C3B6, side: THREE.DoubleSide})
+var floorCube = new THREE.Mesh(floorGeometry, floorMaterial)
+floorCube.position.y = -5
+scene.add(floorCube)
+
 //logic
 
 var update = function(){
